@@ -11,6 +11,8 @@ pub struct TreeNode {
     pub right: Option<Rc<RefCell<TreeNode>>>,
 }
 
+pub type TreeNodeWrapped = Option<Rc<RefCell<TreeNode>>>;
+
 impl TreeNode {
     #[inline]
     pub fn new(val: i32) -> Self {
@@ -21,7 +23,7 @@ impl TreeNode {
         }
     }
 
-    pub fn wrapped(self) -> Option<Rc<RefCell<TreeNode>>> {
+    pub fn wrapped(self) -> TreeNodeWrapped {
         Some(Rc::new(RefCell::new(self)))
     }
 }

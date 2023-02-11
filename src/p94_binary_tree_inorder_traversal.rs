@@ -73,11 +73,9 @@ mod tests {
         assert_match(&result, &vec![1]);
     }
 
-    type NodeLink = Option<Rc<RefCell<TreeNode>>>;
     #[test]
     fn p94_case3() {
-        let root: NodeLink = None;
-        let result = Solution::inorder_traversal(root);
+        let result = Solution::inorder_traversal(None);
         assert_match(&result, &vec![]);
     }
 }
