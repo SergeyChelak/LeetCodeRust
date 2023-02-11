@@ -1,24 +1,4 @@
-use std::rc::Rc;
-use std::cell::RefCell;
-
-// Definition for a binary tree node.
-#[derive(Debug, PartialEq, Eq)]
-pub struct TreeNode {
-  pub val: i32,
-  pub left: Option<Rc<RefCell<TreeNode>>>,
-  pub right: Option<Rc<RefCell<TreeNode>>>,
-}
-
-impl TreeNode {
-  #[inline]
-  pub fn new(val: i32) -> Self {
-    TreeNode {
-      val,
-      left: None,
-      right: None
-    }
-  }
-}
+use super::structs::*;
 
 struct Solution;
 
@@ -48,7 +28,7 @@ impl Solution {
             result.append(&mut left_travere);
             result.push(node.val);
             result.append(&mut right_traverse);
-            result            
+            result
         } else {
             return vec![]
         }
@@ -59,16 +39,7 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use super::*;
-
-    fn assert_match(arr1: &Vec<i32>, arr2: &Vec<i32>) {
-        arr1.iter()
-            .zip(arr2.iter())
-            .for_each(|(a, b)| assert_eq!(a, b, "values doesn't match"))
-    }
-
-    fn wrap_node(node: TreeNode) -> Option<Rc<RefCell<TreeNode>>> {
-        Some(Rc::new(RefCell::new(node)))
-    }
+    use crate::utils::*;
 
     #[test]
     fn p94_case1() {
@@ -80,17 +51,16 @@ mod tests {
 
         let node2 = TreeNode {
             val: 2,
-            left: wrap_node(node3),
+            left: node3.wrapped(),
             right: None,
         };
 
         let node1 = TreeNode {
             val: 1,
             left: None,
-            right: wrap_node(node2),
+            right: node2.wrapped(),
         };
-        let root = wrap_node(node1);
-        let result = Solution::inorder_traversal(root);
+        let result = Solution::inorder_traversal(node1.wrapped());
         let expected = vec![1, 3, 2];
         assert_match(&result, &expected);
     }
@@ -98,7 +68,7 @@ mod tests {
     #[test]
     fn p94_case2() {
         let node = TreeNode::new(1);
-        let root = wrap_node(node);        
+        let root = node.wrapped();
         let result = Solution::inorder_traversal(root);
         assert_match(&result, &vec![1]);
     }
@@ -106,9 +76,8 @@ mod tests {
     type NodeLink = Option<Rc<RefCell<TreeNode>>>;
     #[test]
     fn p94_case3() {
-        let node = TreeNode::new(1);
         let root: NodeLink = None;
         let result = Solution::inorder_traversal(root);
         assert_match(&result, &vec![]);
-   }
+    }
 }
