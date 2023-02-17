@@ -9,22 +9,6 @@ struct Solution;
 
 impl Solution {
     pub fn inorder_traversal(root: Option<Rc<RefCell<TreeNode>>>) -> Vec<i32> {
-        let Some(value) = root else {
-            return vec![];
-        };
-        let node = value.borrow();
-        let mut left_travere = Self::inorder_traversal(node.left.clone());
-        let mut right_traverse = Self::inorder_traversal(node.right.clone());
-        let mut result: Vec<i32> = Vec::new();
-        result.append(&mut left_travere);
-        result.push(node.val);
-        result.append(&mut right_traverse);
-        result
-    }
-
-    // leetcode doesn't support let-else guards
-    /*
-    pub fn inorder_traversal(root: Option<Rc<RefCell<TreeNode>>>) -> Vec<i32> {
         if let Some(value) = root {
             let node = value.borrow();
             let mut left_travere = Self::inorder_traversal(node.left.clone());
@@ -38,7 +22,6 @@ impl Solution {
             return vec![]
         }
     }
-     */
 }
 
 #[cfg(test)]
