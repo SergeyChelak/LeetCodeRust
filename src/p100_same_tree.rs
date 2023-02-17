@@ -3,7 +3,7 @@
 // https://leetcode.com/problems/same-tree/
 //
 
-use super::structs::*;
+use super::structs::tree_node::*;
 
 struct Solution;
 
@@ -36,15 +36,15 @@ mod tests {
 
     #[test]
     fn p100_case1() {
-       let tree1 = create_213();
-       let tree2 = create_213();
-       assert!(Solution::is_same_tree(tree1, tree2));
+        let tree1 = create_213();
+        let tree2 = create_213();
+        assert!(Solution::is_same_tree(tree1, tree2));
     }
     #[test]
     fn p100_case2() {
-       let tree1 = create_12();
-       let tree2 = create_21();
-       assert!(!Solution::is_same_tree(tree1, tree2));
+        let tree1 = create_12();
+        let tree2 = create_21();
+        assert!(!Solution::is_same_tree(tree1, tree2));
     }
 
     #[test]
@@ -60,7 +60,7 @@ mod tests {
         let node1 = TreeNode {
             val: 1,
             left: node2.wrapped(),
-            right: node3.wrapped()
+            right: node3.wrapped(),
         };
         node1.wrapped()
     }
@@ -70,7 +70,7 @@ mod tests {
         let node1 = TreeNode {
             val: 1,
             left: node2.wrapped(),
-            right: None
+            right: None,
         };
         node1.wrapped()
     }
@@ -80,7 +80,7 @@ mod tests {
         let node1 = TreeNode {
             val: 1,
             left: None,
-            right: node2.wrapped()
+            right: node2.wrapped(),
         };
         node1.wrapped()
     }
@@ -91,7 +91,7 @@ mod tests {
         let node1 = TreeNode {
             val: 1,
             left: node2.wrapped(),
-            right: node3.wrapped()
+            right: node3.wrapped(),
         };
         node1.wrapped()
     }
@@ -102,9 +102,8 @@ mod tests {
         let node1 = TreeNode {
             val: 1,
             left: node2.wrapped(),
-            right: node3.wrapped()
+            right: node3.wrapped(),
         };
         node1.wrapped()
     }
-
 }

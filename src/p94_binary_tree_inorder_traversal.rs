@@ -3,7 +3,7 @@
 // https://leetcode.com/problems/binary-tree-inorder-traversal/
 //
 
-use super::structs::*;
+use super::structs::tree_node::*;
 
 struct Solution;
 
