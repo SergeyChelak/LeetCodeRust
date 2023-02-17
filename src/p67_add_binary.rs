@@ -3,9 +3,9 @@
 // https://leetcode.com/problems/add-binary/
 //
 
-struct AddBinary;
+struct Solution;
 
-impl AddBinary {
+impl Solution {
     pub fn add_binary(a: String, b: String) -> String {
         let a_chars: Vec<char> = a.chars().collect();
         let b_chars: Vec<char> = b.chars().collect();
@@ -56,7 +56,7 @@ mod tests {
         let a = "11".to_string();
         let b = "1".to_string();
         let expected = "100".to_string();
-        let result = AddBinary::add_binary(a, b);
+        let result = Solution::add_binary(a, b);
         assert_eq!(result, expected);
     }
 
@@ -65,7 +65,7 @@ mod tests {
         let a = "1010".to_string();
         let b = "1011".to_string();
         let expected = "10101".to_string();
-        let result = AddBinary::add_binary(a, b);
+        let result = Solution::add_binary(a, b);
         assert_eq!(result, expected);
     }
 }
