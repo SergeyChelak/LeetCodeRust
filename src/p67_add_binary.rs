@@ -38,9 +38,8 @@ impl AddBinary {
 
     fn char_to_i32(array: &Vec<char>, index: &i32) -> i32 {
         if *index < 0 {
-            return 0;
-        }
-        return if array[*index as usize] == '1' { 
+            0
+        } else if array[*index as usize] == '1' { 
             1
         } else { 
             0
