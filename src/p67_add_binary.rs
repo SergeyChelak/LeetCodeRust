@@ -10,12 +10,12 @@ impl Solution {
         let a_chars: Vec<char> = a.chars().collect();
         let b_chars: Vec<char> = b.chars().collect();
         let mut carry = 0;
-        let mut aPtr = (a_chars.len() - 1) as i32;
-        let mut bPtr = (b_chars.len() - 1) as i32;
+        let mut a_ptr = (a_chars.len() - 1) as i32;
+        let mut b_ptr = (b_chars.len() - 1) as i32;
         let mut result = String::new();
-        while aPtr >= 0 || bPtr >= 0 {
-            let x = Self::char_to_i32(&a_chars, &aPtr);
-            let y = Self::char_to_i32(&b_chars, &bPtr);            
+        while a_ptr >= 0 || b_ptr >= 0 {
+            let x = Self::char_to_i32(&a_chars, &a_ptr);
+            let y = Self::char_to_i32(&b_chars, &b_ptr);            
             let mut sum = x + y + carry;
             carry = 0;
             if sum > 1 {
@@ -27,8 +27,8 @@ impl Solution {
             } else {
                 result.insert(0, '1');
             }            
-            aPtr -= 1;
-            bPtr -= 1;
+            a_ptr -= 1;
+            b_ptr -= 1;
         }
         if carry > 0 {
             result.insert(0, '1');
