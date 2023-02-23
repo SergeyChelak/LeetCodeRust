@@ -8,6 +8,7 @@ mod p104_maximum_depth_binary_tree;
 mod p108_convert_sorted_array_binary_tree;
 mod p110_balanced_binary_tree;
 mod p112_path_sum;
+mod p125_valid_palindrome;
 mod p202_happy_number;
 mod p67_add_binary;
 mod p94_binary_tree_inorder_traversal;
