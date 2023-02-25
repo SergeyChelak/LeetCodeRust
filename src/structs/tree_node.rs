@@ -1,4 +1,4 @@
-// Shared LeetCode structs and helper methods
+// Shared TreeNode struct from LeetCode and custom helper methods
 //
 pub use std::cell::RefCell;
 pub use std::rc::Rc;
