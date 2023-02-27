@@ -11,6 +11,7 @@ mod p111_minimum_depth_binary_tree;
 mod p112_path_sum;
 mod p119_pascal_triangle2;
 mod p125_valid_palindrome;
+mod p144_preorder_traversal;
 mod p168_excel_sheet_column_title;
 mod p202_happy_number;
 mod p67_add_binary;
