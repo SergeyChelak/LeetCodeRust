@@ -7,15 +7,11 @@ pub struct Solution;
 
 impl Solution {
     pub fn title_to_number(column_title: String) -> i32 {
-        let mut pow = 1;
-        let mut result = 0i32;
-        let offset = 'A' as u8;
-        for ch in column_title.chars().rev() {            
-            let val = ch as u8 - offset + 1;
-            result += val as i32 * pow;
-            pow *= 26;
-        }
-        result
+        column_title.chars()
+        .map(|x| (x as u8 - 'A' as u8) as i32 + 1)
+        .rev()
+        .fold((0i32, 1i32), |(acc, pow), val| (acc + val * pow, pow * 26))
+        .0
     }
 }
 
