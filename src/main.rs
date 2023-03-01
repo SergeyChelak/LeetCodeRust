@@ -14,6 +14,7 @@ mod p125_valid_palindrome;
 mod p144_preorder_traversal;
 mod p145_postorder_traversal;
 mod p168_excel_sheet_column_title;
+mod p171_excel_sheet_column_number;
 mod p202_happy_number;
 mod p67_add_binary;
 mod p94_binary_tree_inorder_traversal;
