@@ -18,6 +18,7 @@ mod p171_excel_sheet_column_number;
 mod p202_happy_number;
 mod p203_remove_linked_list_elements;
 mod p205_isomorphic_strings;
+mod p217_contains_duplicate;
 mod p67_add_binary;
 mod p94_binary_tree_inorder_traversal;
 
