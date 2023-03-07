@@ -21,6 +21,7 @@ mod p205_isomorphic_strings;
 mod p217_contains_duplicate;
 mod p67_add_binary;
 mod p94_binary_tree_inorder_traversal;
+mod p890_find_replace_pattern;
 
 // Normally this function shouldn't contain implementation
 fn main() {
