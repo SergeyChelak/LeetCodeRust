@@ -19,6 +19,7 @@ mod p202_happy_number;
 mod p203_remove_linked_list_elements;
 mod p205_isomorphic_strings;
 mod p217_contains_duplicate;
+mod p34_find_first_last_position_sorted_array;
 mod p67_add_binary;
 mod p94_binary_tree_inorder_traversal;
 mod p890_find_replace_pattern;
