@@ -23,6 +23,7 @@ mod p34_find_first_last_position_sorted_array;
 mod p67_add_binary;
 mod p94_binary_tree_inorder_traversal;
 mod p890_find_replace_pattern;
+mod p916_word_subsets;
 
 // Normally this function shouldn't contain implementation
 fn main() {
