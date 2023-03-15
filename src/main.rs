@@ -21,6 +21,7 @@ mod p205_isomorphic_strings;
 mod p217_contains_duplicate;
 mod p34_find_first_last_position_sorted_array;
 mod p67_add_binary;
+mod p792_number_matching_subsequences;
 mod p94_binary_tree_inorder_traversal;
 mod p890_find_replace_pattern;
 mod p916_word_subsets;
