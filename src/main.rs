@@ -5,6 +5,7 @@ mod p1_two_sum;
 mod p100_same_tree;
 mod p101_symmetric_tree;
 mod p104_maximum_depth_binary_tree;
+mod p1074_number_submatrices_sum_target;
 mod p108_convert_sorted_array_binary_tree;
 mod p110_balanced_binary_tree;
 mod p111_minimum_depth_binary_tree;
