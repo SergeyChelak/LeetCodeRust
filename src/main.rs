@@ -10,6 +10,7 @@ mod p108_convert_sorted_array_binary_tree;
 mod p110_balanced_binary_tree;
 mod p111_minimum_depth_binary_tree;
 mod p112_path_sum;
+mod p118_pascal_triangle;
 mod p119_pascal_triangle2;
 mod p125_valid_palindrome;
 mod p144_preorder_traversal;
