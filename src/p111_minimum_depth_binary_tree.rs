@@ -5,8 +5,8 @@
 
 use crate::structs::tree_node::*;
 
-use std::rc::Rc;
 use std::cell::RefCell;
+use std::rc::Rc;
 
 struct Solution;
 
@@ -25,7 +25,7 @@ impl Solution {
                     let node = node.borrow();
                     if node.left.is_none() && node.right.is_none() {
                         return depth;
-                    } 
+                    }
                     if node.left.is_some() {
                         next_level.push(node.left.clone());
                     }

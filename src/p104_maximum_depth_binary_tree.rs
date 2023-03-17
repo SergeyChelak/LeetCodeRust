@@ -4,12 +4,12 @@
 //
 
 use crate::structs::tree_node::*;
-use std::rc::Rc;
 use std::cell::RefCell;
+use std::rc::Rc;
 
 struct Solution;
 
-type Node =  Option<Rc<RefCell<TreeNode>>>;
+type Node = Option<Rc<RefCell<TreeNode>>>;
 
 impl Solution {
     pub fn max_depth(root: Option<Rc<RefCell<TreeNode>>>) -> i32 {
@@ -23,8 +23,7 @@ impl Solution {
                 break levels;
             } else {
                 levels += 1;
-                level = level.iter()
-                .fold(Vec::<Node>::new(), |mut acc, item| {
+                level = level.iter().fold(Vec::<Node>::new(), |mut acc, item| {
                     if let Some(ref_node) = item {
                         let node = ref_node.borrow();
                         if let Some(left) = &node.left {

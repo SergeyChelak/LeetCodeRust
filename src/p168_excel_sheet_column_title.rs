@@ -19,7 +19,8 @@ impl Solution {
             array.push(m);
         }
         let offset = 'A' as u8;
-        array.iter()
+        array
+            .iter()
             .rev()
             .map(|idx| (*idx as u8 + offset - 1) as char)
             .collect()

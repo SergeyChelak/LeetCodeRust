@@ -19,7 +19,7 @@ impl Solution {
             result.append(&mut right_traverse);
             result
         } else {
-            return vec![]
+            return vec![];
         }
     }
 }

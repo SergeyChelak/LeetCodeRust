@@ -3,8 +3,8 @@
 // https://leetcode.com/problems/binary-tree-preorder-traversal/
 //
 use crate::structs::tree_node::TreeNode;
-use std::rc::Rc;
 use std::cell::RefCell;
+use std::rc::Rc;
 
 struct Solution;
 

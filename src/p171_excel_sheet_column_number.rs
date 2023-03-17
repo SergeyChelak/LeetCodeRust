@@ -7,11 +7,12 @@ pub struct Solution;
 
 impl Solution {
     pub fn title_to_number(column_title: String) -> i32 {
-        column_title.chars()
-        .map(|x| (x as u8 - 'A' as u8) as i32 + 1)
-        .rev()
-        .fold((0i32, 1i32), |(acc, pow), val| (acc + val * pow, pow * 26))
-        .0
+        column_title
+            .chars()
+            .map(|x| (x as u8 - 'A' as u8) as i32 + 1)
+            .rev()
+            .fold((0i32, 1i32), |(acc, pow), val| (acc + val * pow, pow * 26))
+            .0
     }
 }
 
@@ -43,5 +44,4 @@ mod tests {
     fn p171_case4() {
         assert_eq!(Solution::title_to_number("ZZ".to_string()), 702);
     }
-
 }

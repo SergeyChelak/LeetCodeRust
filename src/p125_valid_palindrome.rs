@@ -7,7 +7,8 @@ struct Solution;
 
 impl Solution {
     pub fn is_palindrome(s: String) -> bool {
-        let s = s.chars()
+        let s = s
+            .chars()
             .filter(|x| x.is_ascii_alphanumeric())
             .collect::<String>()
             .to_lowercase();
@@ -21,7 +22,9 @@ mod test {
 
     #[test]
     fn p125_case1() {
-        assert!(Solution::is_palindrome("A man, a plan, a canal: Panama".to_string()));
+        assert!(Solution::is_palindrome(
+            "A man, a plan, a canal: Panama".to_string()
+        ));
     }
 
     #[test]

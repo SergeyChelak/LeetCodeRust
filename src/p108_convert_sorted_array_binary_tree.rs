@@ -3,9 +3,9 @@
 // https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/
 //
 
-use std::rc::Rc;
-use std::cell::RefCell;
 use super::structs::tree_node::*;
+use std::cell::RefCell;
+use std::rc::Rc;
 struct Solution;
 
 impl Solution {

@@ -11,6 +11,8 @@ impl Solution {
         nums.iter()
             .zip(nums.iter().skip(1))
             .map(|(l, r)| if *l == *r { 1 } else { 0 })
-            .max().unwrap_or_default() > 0
+            .max()
+            .unwrap_or_default()
+            > 0
     }
 }

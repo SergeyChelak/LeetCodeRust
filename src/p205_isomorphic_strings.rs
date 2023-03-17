@@ -20,7 +20,7 @@ impl Solution {
                     s_map[idx_s] = nextId;
                     t_map[idx_t] = nextId;
                     nextId += 1;
-                },
+                }
                 (a, b) if a == b => continue,
                 _ => return false,
             }
@@ -35,21 +35,33 @@ mod tests {
 
     #[test]
     fn p205_case1() {
-        assert!(Solution::is_isomorphic("egg".to_string(), "add".to_string()));
+        assert!(Solution::is_isomorphic(
+            "egg".to_string(),
+            "add".to_string()
+        ));
     }
 
     #[test]
     fn p205_case2() {
-        assert!(!Solution::is_isomorphic("foo".to_string(), "bar".to_string()));
+        assert!(!Solution::is_isomorphic(
+            "foo".to_string(),
+            "bar".to_string()
+        ));
     }
 
     #[test]
     fn p205_case3() {
-        assert!(Solution::is_isomorphic("paper".to_string(), "title".to_string()));
+        assert!(Solution::is_isomorphic(
+            "paper".to_string(),
+            "title".to_string()
+        ));
     }
 
     #[test]
     fn p205_case4() {
-        assert!(!Solution::is_isomorphic("badc".to_string(), "baba".to_string()));
+        assert!(!Solution::is_isomorphic(
+            "badc".to_string(),
+            "baba".to_string()
+        ));
     }
 }

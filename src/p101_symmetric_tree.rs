@@ -24,8 +24,8 @@ impl Solution {
             let node_left = ref_left.borrow();
             let node_right = ref_right.borrow();
             if node_left.val == node_right.val {
-                Self::traverse(node_left.left.clone(), node_right.right.clone()) &&
-                Self::traverse(node_left.right.clone(), node_right.left.clone())
+                Self::traverse(node_left.left.clone(), node_right.right.clone())
+                    && Self::traverse(node_left.right.clone(), node_right.left.clone())
             } else {
                 false
             }
@@ -33,5 +33,4 @@ impl Solution {
             left.is_none() && right.is_none()
         }
     }
-
 }

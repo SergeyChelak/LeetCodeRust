@@ -15,7 +15,7 @@ impl Solution {
         let mut result = String::new();
         while a_ptr >= 0 || b_ptr >= 0 {
             let x = Self::char_to_i32(&a_chars, &a_ptr);
-            let y = Self::char_to_i32(&b_chars, &b_ptr);            
+            let y = Self::char_to_i32(&b_chars, &b_ptr);
             let mut sum = x + y + carry;
             carry = 0;
             if sum > 1 {
@@ -26,7 +26,7 @@ impl Solution {
                 result.insert(0, '0');
             } else {
                 result.insert(0, '1');
-            }            
+            }
             a_ptr -= 1;
             b_ptr -= 1;
         }
@@ -39,9 +39,9 @@ impl Solution {
     fn char_to_i32(array: &Vec<char>, index: &i32) -> i32 {
         if *index < 0 {
             0
-        } else if array[*index as usize] == '1' { 
+        } else if array[*index as usize] == '1' {
             1
-        } else { 
+        } else {
             0
         }
     }

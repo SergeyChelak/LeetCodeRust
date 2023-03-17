@@ -3,8 +3,8 @@
 // https://leetcode.com/problems/binary-tree-postorder-traversal/
 //
 use crate::structs::tree_node::*;
-use std::rc::Rc;
 use std::cell::RefCell;
+use std::rc::Rc;
 struct Solution;
 
 impl Solution {

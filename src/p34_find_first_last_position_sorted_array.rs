@@ -42,7 +42,7 @@ mod tests {
 
     #[test]
     pub fn p34_test() {
-        let input = vec!(5,7,7,8,8,10);
+        let input = vec![5, 7, 7, 8, 8, 10];
         let output = Solution::search_range(input, 8);
         assert_eq!(output.len(), 2);
         assert_eq!(output[0], 3);

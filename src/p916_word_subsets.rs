@@ -33,7 +33,7 @@ impl Solution {
             for i in 0..FREQ_SIZE {
                 if freq[i] < overall_char_freq[i] {
                     continue 'search_loop;
-                }                
+                }
             }
             result.push(word.clone());
         }

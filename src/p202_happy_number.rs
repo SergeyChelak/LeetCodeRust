@@ -19,9 +19,9 @@ impl Solution {
                 val /= 10;
             }
             if tmp == 1 {
-                break true
+                break true;
             } else if numbers.contains(&tmp) {
-                break false
+                break false;
             }
             val = tmp;
         }
