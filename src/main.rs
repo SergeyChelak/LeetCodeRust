@@ -5,6 +5,7 @@ mod p0001_two_sum;
 mod p0034_find_first_last_position_sorted_array;
 mod p0066_plus_one;
 mod p0067_add_binary;
+mod p0077_combinations;
 mod p0094_binary_tree_inorder_traversal;
 mod p0100_same_tree;
 mod p0101_symmetric_tree;
