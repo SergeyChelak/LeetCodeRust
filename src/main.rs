@@ -25,6 +25,7 @@ mod p0202_happy_number;
 mod p0203_remove_linked_list_elements;
 mod p0205_isomorphic_strings;
 mod p0217_contains_duplicate;
+mod p0283_move_zeroes;
 mod p0322_coin_change;
 mod p0792_number_matching_subsequences;
 mod p0890_find_replace_pattern;

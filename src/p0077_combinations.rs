@@ -16,7 +16,7 @@ impl Combination {
         Self {
             max: n as usize,
             targetSize: k as usize,
-            backtrack: Vec::new()
+            backtrack: Vec::new(),
         }
     }
 
@@ -41,10 +41,9 @@ impl Combination {
 }
 
 impl Solution {
-
     pub fn combine(n: i32, k: i32) -> Vec<Vec<i32>> {
         let mut combination = Combination::new(n, k);
         combination.generate();
         combination.backtrack
-    }       
+    }
 }
